@@ -1,0 +1,43 @@
+.lista-productos,
+.lista-usuarios {
+  margin: 20px;
+}
+
+.lista-productos table,
+.lista-usuarios table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.lista-productos table th,
+.lista-productos table td,
+.lista-usuarios table th,
+.lista-usuarios table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.lista-productos table th,
+.lista-usuarios table th {
+  background-color: #f2f2f2;
+}
+
+.lista-productos button,
+.lista-usuarios button {
+  padding: 6px 12px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.lista-productos button:hover,
+.lista-usuarios button:hover {
+  background-color: #0056b3;
+}
+
+.lista-productos h2,
+.lista-usuarios h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}

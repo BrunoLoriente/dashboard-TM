@@ -4,7 +4,7 @@ export const sideBar = [
   {
     id: "genres",
     title: "Categorias",
-    route: "/genres"
+    route: "/categorias"
   },
   {
     id: "ultimoProducto",
@@ -13,17 +13,17 @@ export const sideBar = [
   },
   {
     id: "dataMovies",
-    title: "Stats",
+    title: "Estadísticas",
     route: "/stats" 
   },
   {
     id: "dataMovies",
-    title: "Table",
+    title: "Lista de usuarios",
     route: "/table"
   },
   {
     id: "searchMovies",
-    title: "Search",
-    route: "/searchmovies"
+    title: "Lista de productos",
+    route: "/listaProductos"
   },
 ]

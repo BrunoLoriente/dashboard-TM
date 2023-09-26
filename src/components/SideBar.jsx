@@ -1,7 +1,7 @@
 import React from 'react';
 import image from '../assets/images/logo-DH.png'
 import PropTypes from 'prop-types'
-import { ContentWrapper, GenresInDb, UltimoProducto, ContentRowMovies, MoviesTable , SearchMovies, NotFound } from './index'
+import { ContentWrapper, GenresInDb, UltimoProducto, ContentRowMovies, MoviesTable , SearchMovies, NotFound, ListaProductos } from './index'
 import { Link, Route, Routes } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 
@@ -78,7 +78,7 @@ export default function SideBar(props) {
                                                             productInfo = {productInfo}
                                                             userInfo = {userInfo}/>} />
 
-            <Route path ='/genres' exact  element={<GenresInDb 
+            <Route path ='/categorias' exact  element={<GenresInDb 
                                                             categories = {Object.keys(productInfo.countByCategory)}/>} />
 
             <Route path ='/ultimoProducto' exact  element={<UltimoProducto
@@ -95,7 +95,14 @@ export default function SideBar(props) {
                                                                   data = {productInfo.products}
                                                                   header = {['id', 'name', 'description', 'category', 'detail']}/>} />
 
-            <Route path ='/searchmovies' exact  element={SearchMovies} />
+            <Route path ='/listaProductos' exact  element={<ListaProductos
+                                                                  data = {productInfo.products}
+                                                                  header = {['id', 'name', 'description', 'category', 'detail']}/>} />            
+                                                                                                                  
+            <Route path ='/table' exact  element={<SearchMovies 
+                                                            data = {userInfo.users}
+                                                            header = {['id', 'nombre', 'email', 'detail']}/>} />
+
             <Route element={NotFound} />                          
       </Routes>
 
